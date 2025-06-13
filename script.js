@@ -21,7 +21,6 @@ spec.addEventListener('click', async function() {
         await navigator.clipboard.writeText('car_spec_382044.tga');
         
         spec.innerText = "Copied!";
-
         
         setTimeout(() => {
             spec.innerText = "car_spec_382044.tga";
