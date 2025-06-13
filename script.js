@@ -24,7 +24,7 @@ spec.addEventListener('click', async function() {
 
         
         setTimeout(() => {
-            spec.innerText = "car_spec_382044.tga'";
+            spec.innerText = "car_spec_382044.tga";
         }, 1300);
 
     } catch (err) {
