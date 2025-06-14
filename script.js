@@ -7,6 +7,8 @@ let memberNum = "XXXXXX";
 const h1 = document.querySelector('h1');
 const car = document.getElementById('car');
 const spec = document.getElementById('spec');
+const stripe1 = document.getElementById('stripe1');
+const stripe2 = document.getElementById('stripe2');
 
 let toggleClass = (slctr, cls) => {
     slctr.classList.toggle(cls)
@@ -14,12 +16,12 @@ let toggleClass = (slctr, cls) => {
 
 edit.addEventListener('click', () => {
     toggleClass(modal, 'hidden');
-    [h1, car, spec].forEach((i) => toggleClass(i, "blur"))
+    [h1, car, spec, stripe1, stripe2].forEach((i) => toggleClass(i, "blur"))
 })
 
 submit.addEventListener('click', () => {
     toggleClass(modal, 'hidden');
-    [h1, car, spec].forEach((i) => toggleClass(i, "blur"))
+    [h1, car, spec, stripe1, stripe2].forEach((i) => toggleClass(i, "blur"))
     memberNum = memberNumInput.value
     car.innerText = `car_${memberNum}.tga`
     spec.innerText = `car_spec_${memberNum}.tga`
