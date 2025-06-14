@@ -4,15 +4,22 @@ const memberNumInput = document.querySelector('#member-num-field');
 const submit = document.querySelector('#submit-btn');
 let memberNum = "XXXXXX";
 
+const h1 = document.querySelector('h1');
 const car = document.getElementById('car');
 const spec = document.getElementById('spec');
 
-edit.addEventListener('click', () =>
-    modal.classList.toggle('hidden')
-)
+let toggleClass = (slctr, cls) => {
+    slctr.classList.toggle(cls)
+}
+
+edit.addEventListener('click', () => {
+    toggleClass(modal, 'hidden');
+    [h1, car, spec].forEach((i) => toggleClass(i, "blur"))
+})
 
 submit.addEventListener('click', () => {
-    modal.classList.toggle('hidden')
+    toggleClass(modal, 'hidden');
+    [h1, car, spec].forEach((i) => toggleClass(i, "blur"))
     memberNum = Number(memberNumInput.value)
     car.innerText = `car_${memberNum}.tga`
     spec.innerText = `car_spec_${memberNum}.tga`
