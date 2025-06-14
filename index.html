@@ -8,10 +8,17 @@
 </head>
 <body>
     <main class="page">
+        <button id="edit-btn">
+            <img id="edit-svg" src="icons8-edit.svg">
+        </button>
+        <section id="modal" class="hidden">
+            <input type="text" id="member-num-field" placeholder="iRacing member #" autocomplete=“off” maxlength="7">
+            <button id="submit-btn" class="btn">Submit</button>
+        </section>
         <h1>Click to copy:</h1>
         <section class="btn-container">
-            <button id="car" class="btn">car_382044.tga</button>
-            <button id="spec" class="btn">car_spec_382044.tga</button>
+            <button id="car" class="btn">car_XXXXXX.tga</button>
+            <button id="spec" class="btn">car_spec_XXXXXX.tga</button>
         </section>
     </main>
     <script src="script.js"></script>
