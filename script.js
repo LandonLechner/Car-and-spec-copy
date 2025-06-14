@@ -2,7 +2,7 @@ const edit = document.querySelector('#edit-btn');
 const modal = document.querySelector('#modal');
 const memberNumInput = document.querySelector('#member-num-field');
 const submit = document.querySelector('#submit-btn');
-let memberNum;
+let memberNum = "XXXXXX";
 
 const car = document.getElementById('car');
 const spec = document.getElementById('spec');
@@ -51,8 +51,7 @@ spec.addEventListener('click', async function() {
 });
 
 function loadPrevMemberNum () {
-    console.log(memberNum)
-    if (memberNum !== null) {
+    if (memberNum !== "XXXXXX") {
         memberNum = localStorage.getItem("memberNumber");
         car.innerText = `car_${memberNum}.tga`
         spec.innerText = `car_spec_${memberNum}.tga`
