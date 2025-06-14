@@ -8,18 +8,40 @@ body {
 .page {
     gap: 4rem 10rem;
     width: 100%;
-    max-width: 1620px;
-    padding-top: 10vh;
+    max-width: 2160px;
+    margin-top: 10vh;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.stripe {
+    position: absolute;
+    left: -100px;
+    background: #3a3a3a;
+    rotate: -45deg;
+    transform: skewX(-45deg);
+    z-index: -1;
+}
+
+#stripe1 {
+    top: 0;
+    height: 70px;
+    width: 600px;
+}
+
+#stripe2 {
+    top: 110px;
+    height: 15px;
+    width: 600px;
+}
+
+
 h1 {
     color: white;
     text-align: center;
-    font-size: clamp(10vw, 4rem, 6rem);
+    font-size: clamp(10vw, 6rem, 12rem);
     font-weight: 200;
     margin-bottom: 1rem;
     padding: 0 2rem;
