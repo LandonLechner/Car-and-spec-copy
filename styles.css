@@ -9,7 +9,7 @@ body {
     gap: 4rem 10rem;
     width: 100%;
     max-width: 2160px;
-    margin-top: 10vh;
+    padding-top: 10vh;
     position: relative;
     display: flex;
     flex-direction: column;
