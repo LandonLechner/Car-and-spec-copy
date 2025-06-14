@@ -8,7 +8,7 @@ body {
 .page {
     gap: 4rem 10rem;
     width: 100%;
-    max-width: 2000px;
+    max-width: 1620px;
     padding-top: 10vh;
     position: relative;
     display: flex;
@@ -19,7 +19,7 @@ body {
 h1 {
     color: white;
     text-align: center;
-    font-size: clamp(10vw, 6rem, 8rem);
+    font-size: clamp(10vw, 4rem, 6rem);
     font-weight: 200;
     margin-bottom: 1rem;
     padding: 0 2rem;

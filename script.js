@@ -20,7 +20,7 @@ edit.addEventListener('click', () => {
 submit.addEventListener('click', () => {
     toggleClass(modal, 'hidden');
     [h1, car, spec].forEach((i) => toggleClass(i, "blur"))
-    memberNum = Number(memberNumInput.value)
+    memberNum = memberNumInput.value
     car.innerText = `car_${memberNum}.tga`
     spec.innerText = `car_spec_${memberNum}.tga`
     localStorage.setItem("memberNumber", memberNum);
@@ -58,8 +58,8 @@ spec.addEventListener('click', async function() {
 });
 
 function loadPrevMemberNum () {
+    memberNum = localStorage.getItem("memberNumber");
     if (memberNum !== "XXXXXX") {
-        memberNum = localStorage.getItem("memberNumber");
         car.innerText = `car_${memberNum}.tga`
         spec.innerText = `car_spec_${memberNum}.tga`
     }
