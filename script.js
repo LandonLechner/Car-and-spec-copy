@@ -28,36 +28,20 @@ submit.addEventListener('click', () => {
     localStorage.setItem("memberNumber", memberNum);
 })
 
-
-car.addEventListener('click', async function() {
+const btnArray = [car, spec]
+btnArray.forEach(e => {
+    e.addEventListener('click', async function() {
     try {
-        await navigator.clipboard.writeText(`car_${memberNum}.tga`);
-        
-        car.innerText = "Copied!";
-        
+        await navigator.clipboard.writeText(`car_${e === car? `` : `spec_`}${memberNum}.tga`);
+        e.innerText = "Copied!";
         setTimeout(() => {
-            car.innerText = `car_${memberNum}.tga`;
+            e.innerText = `car_${e === car? `` : `spec_`}${memberNum}.tga`;
         }, 1300);
-
     } catch (err) {
         console.error('Failed to copy text: ', err);
     }
-});
-
-spec.addEventListener('click', async function() {
-    try {
-        await navigator.clipboard.writeText(`car_spec_${memberNum}.tga`);
-        
-        spec.innerText = "Copied!";
-        
-        setTimeout(() => {
-            spec.innerText = `car_spec_${memberNum}.tga`;
-        }, 1300);
-
-    } catch (err) {
-        console.error('Failed to copy text: ', err);
-    }
-});
+    })
+})
 
 function loadPrevMemberNum () {
     memberNum = localStorage.getItem("memberNumber");
